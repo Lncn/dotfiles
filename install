@@ -5,16 +5,24 @@ echo "CTRL+C out of this in the next 5 seconds if you want to abort..."
 
 sleep 5
 
+if [ ! -d /opt/nvim-linux64/bin ]; then
+    echo "Installing neovim!"
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+    sudo rm -rf /opt/nvim
+    sudo tar -C /opt -xzf nvim-linux64.tar.gz
+    rm nvim-linux64.tar.gz
+fi
+
 for f in *; do
-	# Exlude this install file and README
-	if [ $f != $(basename $0) ] || [ $f == "README.md" ]
-	then
-        # Do not append the '.' to bin dir
-        if [ $f == "bin" ]
-        then
-            ln -sf $(pwd)/$f ~/$f
-        else
-            ln -sf $(pwd)/$f ~/.$f
-        fi
-	fi
+    # Exlude this install file and README
+    if [ $f != $(basename $0) ] || [ $f == "README.md" ]
+    then
+    # Do not append the '.' to bin dir
+    if [ $f == "bin" ]
+    then
+        ln -sf $(pwd)/$f ~/$f
+    else
+        ln -sf $(pwd)/$f ~/.$f
+    fi
+    fi
 done
