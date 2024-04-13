@@ -1,8 +1,3 @@
-" Enable pathogen plugin manager
-" This allows you to install plugins into their own private directory in ~/.vim/bundle
-" https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
-
 syntax on
 
 " Enable smart indentation by file type
