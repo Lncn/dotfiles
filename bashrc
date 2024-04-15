@@ -16,8 +16,9 @@ export PATH=/snap/bin:$PATH         # Snap installs
 export PATH=/usr/local/go/bin:$PATH # Golang
 export PATH=~/.cargo/bin:$PATH      # Rust (cargo)
 export PATH=~/.local/bin:$PATH      # Python (pip)
+export PATH=/opt/nvim-linux64/bin:$PATH      # Python (pip)
 export PATH=~/bin/:$PATH
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 
 
@@ -37,7 +38,7 @@ export PS1="\[\e[1;30m\]\u@\h\[\e[0m\]:\[\e[1;32m\]\w\[\e[0m\]\$(git_branch) \$ 
 # User specific aliases and functions
 alias ls='ls -GF'
 alias ll='ls -lahGF'
-alias e='vim'
+alias e='nvim'
 
 alias ff='rg --files | rg'
 
