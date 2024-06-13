@@ -1,0 +1,120 @@
+# Lincoln's Alacritty config
+
+#working_directory = "None"
+#live_config_reload = true
+#ipc_socket = true
+
+#[shell]
+#program = "/bin/bash"
+#args = ["--command=tmux"]
+
+#[env]
+#WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+#dimensions            = { columns = 0, lines = 0 }
+#position              = { x = 0, y = 0 }
+#padding               = { x = 0, y = 0 }
+#dynamic_padding       = true
+#decorations           = "Full"
+opacity               = 0.9
+blur                  = true
+#startup_mode          = "Windowed"
+title                 = "Alacazam"
+#dynamic_title         = true
+#class                 = { instance = "Alacritty", general = "Alacritty" }
+#decorations_theme_variant = "None"
+#resize_increments     = false
+#option_as_alt         = "None"
+
+[scrolling]
+history = 10000
+#multiplier = 3
+
+[font]
+normal                = { family = "Ubuntu Mono Nerd Font", style = "Regular" }
+bold                  = { family = "Ubuntu Mono Nerd Font", style = "Bold" }
+italic                = { family = "Ubuntu Mono Nerd Font", style = "Italic" }
+bold_italic           = { family = "Ubuntu Mono Nerd Font", style = "Bold Italic" }
+size                  = 14
+#offset                = { x = 0, y = 0 }
+#glyph_offset          = { x = 0, y = 0 }
+#builtin_box_drawing   = true
+
+# From iTerm2 Pastel Dark theme
+
+# Default colors
+[colors.primary]
+background = '#000000'
+foreground = '#C7C7C7'
+
+# Cursor colors
+[colors.cursor]
+text    = '#FFFEFF'
+cursor  = '#FFB472'
+
+# Normal colors
+[colors.normal]
+black    = '#616161'
+red      = '#FF8272'
+green    = '#B4FA72'
+yellow   = '#FEFDC2'
+blue     = '#A5D5FE'
+magenta  = '#FF8FFD'
+cyan     = '#D0D1FE'
+white    = '#F1F1F1'
+
+# Bright colors
+[colors.bright]
+black    = '#8E8E8E'
+red      = '#FFC4BD'
+green    = '#D6FCB9'
+yellow   = '#FEFDD5'
+blue     = '#C1E3FE'
+magenta  = '#FFB1FE'
+cyan     = '#E5E6FE'
+white    = '#FFFEFF'
+
+[bell]
+animation = "EaseOutExpo"
+color = "0xffffff"
+duration = 0
+
+[selection]
+save_to_clipboard = false
+#semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[cursor]
+#style.shape = "Block"
+#style.blinking = "Off"
+unfocused_hollow = true
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[debug]
+#render_timer = true
+#log_level = "Warn"
+#persistent_logging = false
+print_events = true
+
+[keyboard]
+bindings = [
+  { key = "V",        mods = "Alt", action = "Paste" },
+  { key = "C",        mods = "Alt", action = "Copy" },
+  { key = "Enter",        mods = "Alt", action = "CreateNewWindow" },
+  { key = "Insert",   mods = "Shift",         action = "PasteSelection" },
+  { key = "Key0",     mods = "Control",       action = "ResetFontSize" },
+  { key = "Equals",   mods = "Control",       action = "IncreaseFontSize" },
+  { key = "Minus",    mods = "Control",       action = "DecreaseFontSize" },
+  { key = "PageUp",   mods = "Shift",         action = "ScrollPageUp",      mode = "~Alt" },
+  { key = "PageDown", mods = "Shift",         action = "ScrollPageDown",    mode = "~Alt" },
+  { key = "Up",       mods = "Shift",         action = "ScrollLineUp",      mode = "~Alt" },
+  { key = "Down",     mods = "Shift",         action = "ScrollLineDown",    mode = "~Alt" },
+  { key = "Home",     mods = "Shift",         action = "ScrollToTop",       mode = "~Alt" },
+  { key = "End",      mods = "Shift",         action = "ScrollToBottom",    mode = "~Alt" },
+]
