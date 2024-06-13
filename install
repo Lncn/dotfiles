@@ -22,7 +22,10 @@ for f in *; do
     then
         ln -sf $(pwd)/$f ~/$f
     else
-        ln -sf $(pwd)/$f ~/.$f
+        # Exclude config dir.. this is too often
+        if [ $f != "config" ]
+            ln -sf $(pwd)/$f ~/.$f
+        fi
     fi
     fi
 done
