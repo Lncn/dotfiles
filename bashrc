@@ -32,7 +32,7 @@ HISTFILESIZE=2000
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1="\[\e[1;30m\]\u@\h\[\e[0m\]:\[\e[1;32m\]\w\[\e[0m\]\$(git_branch) \$ "
+export PS1="\[\e[90m\]\u@\h\[\e[0m\]:\[\e[32m\]\w\[\e[0m\]\$(git_branch) \$ "
 
 # User specific aliases and functions
 alias ls='ls -GF'
