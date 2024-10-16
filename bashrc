@@ -15,10 +15,14 @@ fi
 export PATH=/usr/local/go/bin:$PATH # Golang
 export PATH=~/.cargo/bin:$PATH      # Rust (cargo)
 export PATH=~/.local/bin:$PATH      # Python (pip)
-export PATH=/opt/nvim-linux64/bin:$PATH      # Python (pip)
+export PATH=/opt/nvim-macos-arm64/bin:$PATH  # Neovim install (macOS)
+export PATH=/opt/nvim-linux64/bin:$PATH      # Neovim install (Linux)
 export PATH=~/bin/:$PATH
 export EDITOR=nvim
 export PAGER=less
+
+# On macOS disable "zsh default" warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 
 # don't put duplicate lines or lines starting with space in the history.
