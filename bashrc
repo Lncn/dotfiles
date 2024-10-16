@@ -17,6 +17,7 @@ export PATH=~/.cargo/bin:$PATH      # Rust (cargo)
 export PATH=~/.local/bin:$PATH      # Python (pip)
 export PATH=/opt/nvim-macos-arm64/bin:$PATH  # Neovim install (macOS)
 export PATH=/opt/nvim-linux64/bin:$PATH      # Neovim install (Linux)
+export PATH=/opt/homebrew/bin/:$PATH # Homebrew
 export PATH=~/bin/:$PATH
 export EDITOR=nvim
 export PAGER=less
